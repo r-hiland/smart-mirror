@@ -1,25 +1,25 @@
 ---
 // Base Layout
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Components
-import Date from '../components/Date.astro';
-import Time from '../components/Time.astro';
-import Weather from '../components/Weather.astro';
-import WebCam from '../components/WebCam.astro';
+import Date from "../components/Date.astro";
+import Time from "../components/Time.astro";
+import Weather from "../components/Weather.astro";
+import WebCam from "../components/WebCam.astro";
 
 // Your Styles
-import '../styles/MyStyles.css';
+import "../styles/MyStyles.css";
 ---
 
 <BaseLayout>
-<div class="backdrop-blur-md bg-black/30 rounded-3xl">
-	<Date />
+	<div class="backdrop-blur-md bg-black/30">
+		<div class="grid grid-cols-3 grid-gap-4 text-slate-300 text-lg">
+			<Date />
+			<Weather />
+			<Time />
+		</div>
+	</div>
 
-	<Time />
-	
-	<Weather />
-</div>
 	<WebCam />
-	
 </BaseLayout>
